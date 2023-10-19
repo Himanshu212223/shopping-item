@@ -23,14 +23,32 @@ if(quantity){
             quantity.value = 1 ;
         }
         else{
-            quantity.value = Math.floor(quantity.value) ;
+            quantity.value = Math.ceil(quantity.value) ;
+        }
+    });
+    quantity.addEventListener('mousemove', function(){
+        if(quantity.value <= 0){
+            quantity.value = 1 ;
+        }
+        else{
+            quantity.value = Math.ceil(quantity.value) ;
+        }
+    });
+    quantity.addEventListener('mouseleave', function(){
+        if(quantity.value <= 0){
+            quantity.value = 1 ;
+        }
+        else{
+            quantity.value = Math.ceil(quantity.value) ;
         }
     });
     quantity.addEventListener('mouseover', function(){
-        quantity.value = Math.ceil(quantity.value) ;
-    });
-    quantity.addEventListener('mouseleave', function(){
-        quantity.value = Math.ceil(quantity.value) ;
+        if(quantity.value <= 0){
+            quantity.value = 1 ;
+        }
+        else{
+            quantity.value = Math.ceil(quantity.value) ;
+        }
     });
 }
 
