@@ -27,10 +27,10 @@ if(quantity){
         }
     });
     quantity.addEventListener('mouseover', function(){
-        quantity.value = Math.floor(quantity.value) ;
+        quantity.value = Math.ceil(quantity.value) ;
     });
     quantity.addEventListener('mouseleave', function(){
-        quantity.value = Math.floor(quantity.value) ;
+        quantity.value = Math.ceil(quantity.value) ;
     });
 }
 
