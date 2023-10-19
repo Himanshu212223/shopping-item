@@ -22,7 +22,16 @@ if(quantity){
         if(quantity.value <= 0){
             quantity.value = 1 ;
         }
-    })
+        else{
+            quantity.value = Math.floor(quantity.value) ;
+        }
+    });
+    quantity.addEventListener('mouseover', function(){
+        quantity.value = Math.floor(quantity.value) ;
+    });
+    quantity.addEventListener('mouseleave', function(){
+        quantity.value = Math.floor(quantity.value) ;
+    });
 }
 
 
